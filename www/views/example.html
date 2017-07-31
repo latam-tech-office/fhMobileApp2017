@@ -1,43 +1,47 @@
 <section id="query" ng-hide="queryPage">
     <div id="formWrapper" class="panel panel-default">
         <div class="panel-body">
-        <h4>TRAVEL BOOKING</h4>
-           <select class="form-control" id="travelOrigin" ng-model="travelOrigin" value="EZE">
+        <h4> <font color="00bfff"><b>TRAVEL BOOKING</b></font><img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/RHTravel%20logo.png" width="60px" align="right" /></h4>
+           <select class="form-control" id="travelOrigin" ng-model="travelOrigin" value="EZE" style="color:black">
             <option value="EZE" selected>Buenos Aires</option>
             <option value="GRU">Sao Paulo</option>
             <option value="SCL">Santiago</option>
             <option value="BOG">Bogotá</option>
             <option value="MEX">México DF</option>
           </select>
-          <select class="form-control" id="travelDestination" ng-model="travelDestination" value="GRU">
+          <select class="form-control" id="travelDestination" ng-model="travelDestination" value="GRU" style="color:black">
             <option value="EZE">Buenos Aires</option>
             <option value="GRU" selected>Sao Paulo</option>
             <option value="SCL">Santiago</option>
             <option value="BOG">Bogotá</option>
             <option value="MEX">México DF</option>
           </select>
-          <input type="date" class="form-control" ng-model="travelDate" placeholder="Enter travel date." value="2017-01-01">
-          <input type="number" class="form-control" ng-model="travelPassengers" placeholder="Enter amount of passengers." value=2>
-          <input type="number" class="form-control" ng-model="travelDays" placeholder="Enter amount of days." value=6>
+          <input type="date" class="form-control" ng-model="travelDate" placeholder="Enter travel date." value="2017-01-01" style="color:black">
+          <input type="number" class="form-control" ng-model="travelPassengers" placeholder="Enter amount of passengers." value=2 style="color:black">
+          <input type="number" class="form-control" ng-model="travelDays" placeholder="Enter amount of days." value=6 style="color:black">
           <br>
           <br>
-          <p>Book:</p>
-          <input type="checkbox" class="checkbox-inline" ng-model="travelBookFlight" value="false"> Flight
-          <input type="checkbox"class="checkbox-inline" ng-model="travelBookHotel" value="false"> Hotel
-          <input type="checkbox" class="checkbox-inline"  ng-model="travelBookCar" value="false"> Car
-          
+          <font color="00bfff">
+              
+          <p><b>Book:</b></p>
+          <input type="checkbox" class="checkbox-inline" ng-model="travelBookFlight" value="false"> <img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/flights.png" height="40px" width="40px"/>
+          <input type="checkbox" class="checkbox-inline" ng-model="travelBookHotel" value="false"> <img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/hotels.png" height="40px" width="40px"/>
+          <input type="checkbox" class="checkbox-inline" ng-model="travelBookCar" value="false"> <img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/rentals.png" height="40px" width="40px"/>
+              
+          </font>
           <br>
           <br>
-          <button type="button" class="btn btn-primary btn-block" ng-click="search()">Search</button>
+          <button type="button" class="btn btn-primary btn-block" ng-click="search()" style="background-color: #008CBA;border-color: #008CBA;"><b>Search</b></button>
         </div>
     </div>
 </section>
 
 <!-- Results Page -->
 <section id="results" ng-hide="resultsPage">
-  <div id="flightResults" class="panel panel-default" ng-hide="!travelBookFlight">
+  <div id="flightResults" class="panel panel-default" ng-hide="!travelBookFlight"  style="color:#00bfff" >
     <div class="panel-heading">
-      <h4 class="panel-title">Flights</h4>
+        <img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/RHTravel%20logo.png" width="60px" align="right" />
+      <h4 class="panel-title" > <font color="00bfff">Flights</font></h4>
     </div>
     <div class="panel-body">
       <table id="flightsTable" class="table-striped table-condensed">
@@ -58,9 +62,9 @@
       </table>
     </div>
   </div>
-  <div id="hotelResults" class="panel panel-default"  ng-hide="!travelBookHotel">
+  <div id="hotelResults" class="panel panel-default"  ng-hide="!travelBookHotel" style="color:#00bfff" >
     <div class="panel-heading">
-      <h4 class="panel-title">Hotels</h4>
+      <h4 class="panel-title"><font color="00bfff">Hotels </font></h4>
     </div>
     <div class="panel-body">
       <table id="hotelTable" class="table-striped table-condensed">
@@ -81,9 +85,9 @@
       </table>
     </div>
   </div>
-  <div id="carResults" class="panel panel-default"  ng-hide="!travelBookCar">
+  <div id="carResults" class="panel panel-default"  ng-hide="!travelBookCar" style="color:#00bfff" >
     <div class="panel-heading">
-      <h4 class="panel-title">Cars</h4>
+      <h4 class="panel-title"><font color="00bfff">Cars</font></h4>
     </div>
     <div class="panel-body">
       <table id="carTable" class="table-striped table-condensed">
@@ -102,20 +106,21 @@
       </table>
     </div>
   </div>
-  <button type="button" class="btn btn-primary btn-block" ng-click="bookTravel()">Book</button>
-  <button type="button" class="btn btn-primary btn-block" ng-click="backToQuery()">Go Back</button>
+  <button type="button" class="btn btn-primary btn-block" ng-click="bookTravel()" style="background-color: #008CBA;border-color: #008CBA;">Book</button>
+  <button type="button" class="btn btn-primary btn-block" ng-click="backToQuery()" style="background-color: #008CBA;border-color: #008CBA;">Go Back</button>
+<font color="00bfff">
 </section>
 
 <!-- Quote Page -->
 <section id="quote" ng-hide="quotePage">
   <div id="quotePagePanel" class="panel panel-default" >
     <div class="panel-heading">
-      <h4 class="panel-title">Booking</h4>
+      <h4 class="panel-title">Booking<img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/RHTravel%20logo.png" width="60px" align="right" /></h4>
     </div>
     <div class="panel-body">
       <div id="flightQuote" class="panel panel-default" ng-hide="!travelBookFlight">
         <div class="panel-heading" style="background-color:#004153">
-          <h4 class="panel-title" style="color:white">Flight</h4>
+          <h4 class="panel-title" style="color:white">Flight</h4><img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/flights.png" height="40px" width="40px" align="right"/>
         </div>
         <table class="table-striped table-condensed">
           <tr>
@@ -150,7 +155,7 @@
             <th>Price:</th>
             <td>${{flightResp.flightPrice.toFixed(2)}}</td>
           </tr>
-          <tr>
+          <tr style="border:solid;">
             <th>Price with discount: ({{flightResp.flightDisc}}%)</th>
             <td style="font-weight: bold">${{(flightResp.flightPrice* (1-(flightResp.flightDisc)/100)).toFixed(2)}}</td>
           </tr>
@@ -158,7 +163,7 @@
       </div>
       <div id="hotelQuote" class="panel panel-default" ng-hide="!travelBookHotel">
        <div class="panel-heading" style="background-color:#004153">
-          <h4 class="panel-title" style="color:white">Hotel</h4>
+          <h4 class="panel-title" style="color:white">Hotel</h4><img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/hotels.png" height="40px" width="40px" align="right"/>
         </div>
         <table class="table-striped table-condensed">
             <tr>
@@ -185,7 +190,7 @@
               <th>Price:</th>
               <td>${{hotelResp.hotelPrice.toFixed(2)}}</td>
             </tr>
-            <tr>
+            <tr style="border:solid;">
               <th>Price with discount: ({{hotelResp.hotelDisc}}%)</th>
               <td style="font-weight: bold">${{(hotelResp.hotelPrice* (1-(hotelResp.hotelDisc)/100)).toFixed(2)}}</td>
             </tr>
@@ -193,7 +198,7 @@
       </div>
       <div id="carQuote" class="panel panel-default" ng-hide="!travelBookCar">
        <div class="panel-heading" style="background-color:#004153">
-          <h4 class="panel-title" style="color:white">Car</h4>
+          <h4 class="panel-title" style="color:white">Car</h4><img src="https://raw.githubusercontent.com/latam-tech-office/forum2017/master/images/rentals.png" height="40px" width="40px" align="right"/>
         </div>
         <table class="table-striped table-condensed">
             <tr>
@@ -216,13 +221,13 @@
               <th>Price:</th>
               <td>${{carResp.carPrice.toFixed(2)}}</td>
             </tr>
-            <tr>
+            <tr style="border:solid;">
               <th>Price with discount: ({{carResp.carDisc}}%)</th>
               <td style="font-weight: bold">${{(carResp.carPrice* (1-(carResp.carDisc)/100)).toFixed(2)}}</td>
             </tr>
         </table>
       </div>
-      <button type="button" class="btn btn-primary btn-block" ng-click="backToResults()">Go Back</button>
+      <button type="button" class="btn btn-primary btn-block" ng-click="backToResults()" style="background-color: #008CBA;border-color: #008CBA;">Go Back</button>
     </div>
   </div>
 </section>

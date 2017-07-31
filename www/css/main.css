@@ -20,7 +20,7 @@ header {
     left: 0;
     width: 100%;
 }
-.center > h3 {
+/*.center > h3 {
     color: #ffffff;
     letter-spacing: 2px;
     font-family: OS-Light;
@@ -30,7 +30,7 @@ header {
     color: #ffffff;
     letter-spacing: 2px;
     font-family: OS-Light;
-}
+}*/
 .header-footer-bg {
     background-color: #7ea1b6;
 }

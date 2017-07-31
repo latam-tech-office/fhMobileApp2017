@@ -307,8 +307,8 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #CAE3E9;
-  background-image: url("https://dl.dropboxusercontent.com/u/351124934/imgs/bg_travelapp.jpg");
+  background-color: #FFFFFF;
+ /* background-image: url("https://dl.dropboxusercontent.com/u/351124934/imgs/bg_travelapp.jpg");*/
   background-size: 100%;
 }
 
@@ -1691,7 +1691,7 @@ th {
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
   padding: 5px;
-  color: #FFFFFF;
+ /* color: #FFFFFF;*/
 }
 
 .table-bordered {
@@ -5778,11 +5778,11 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-default {
   border-color: transparent;
-  color: #FFFFFF;
+ /* color: #FFFFFF;*/
 }
 
 .panel-default > .panel-heading {
-  color: #FFFFFF;
+ /* color: #FFFFFF;*/
   background-color: transparent;
   border-color: #000000;
 }
